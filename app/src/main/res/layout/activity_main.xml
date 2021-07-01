@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_marginHorizontal="20dp"
+        android:padding="10dp"
+        android:text="Nombre de la canción"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_music"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <SeekBar
+            android:id="@+id/sb_music"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content">
+        </SeekBar>
+
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@+id/sb_music"
+            android:text="0:10"
+            android:textSize="14sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="false"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/sb_music"
+            android:text="4:10"
+            android:textSize="14sp">
+
+        </TextView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <ImageButton
+            android:id="@+id/btn_play_pause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="2dp"
+            android:background="@drawable/ic_pause"
+            android:text="@string/pause" />
+        <ImageButton
+            android:id="@+id/btn_stop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/stop"
+            android:layout_marginHorizontal="2dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_stop"/>
+        <ImageButton
+            android:id="@+id/btn_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/no_repeat"
+            android:layout_marginHorizontal="2dp"
+            android:background="@drawable/ic_norepeat"/>
+        <ImageButton
+            android:id="@+id/btn_previous"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/previous"
+            android:layout_marginHorizontal="2dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_previous"/>
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/next"
+            android:layout_marginHorizontal="2dp"
+            android:background="#00FFFFFF"
+            android:src="@drawable/ic_next"/>
+    </LinearLayout>
+</LinearLayout>
